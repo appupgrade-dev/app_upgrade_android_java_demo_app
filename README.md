@@ -4,7 +4,7 @@
 
 You can find the android java demo app integrated via Android SDK in [main](https://github.com/appupgrade-dev/app_upgrade_android_java_demo_app) branch.
 
-You can find Java version [here](https://github.com/appupgrade-dev/app_upgrade_android_kotlin_demo_app)
+You can find Kotlin version [here](https://github.com/appupgrade-dev/app_upgrade_android_kotlin_demo_app)
 
 ## Installation
 
