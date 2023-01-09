@@ -11,6 +11,8 @@ import android.app.AlertDialog;
 import android.content.ActivityNotFoundException;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.view.View;
+import android.widget.Button;
 
 public class AppUpgrade {
 
@@ -66,16 +68,28 @@ public class AppUpgrade {
     public void showForceUpgradePopup(Activity parentActivity, String updateMessage) {
         Log.i("App Upgrade: ", "Show force upgrade popup.");
 
-        new AlertDialog.Builder(parentActivity)
+        final AlertDialog alertDialog = new AlertDialog.Builder(parentActivity)
+                .setCancelable(false)
                 .setTitle("Please Update")
                 .setMessage(updateMessage)
-                .setPositiveButton("Update Now", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
+                .setPositiveButton("Update Now", null)
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .create();
+
+        alertDialog.setOnShowListener(new DialogInterface.OnShowListener() {
+            @Override
+            public void onShow(DialogInterface dialogInterface) {
+                Button b = alertDialog.getButton(AlertDialog.BUTTON_POSITIVE);
+                b.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
                         onUserUpdate(parentActivity);
                     }
-                })
-                .setIcon(android.R.drawable.ic_dialog_alert)
-                .show();
+                });
+            }
+        });
+
+        alertDialog.show();
     }
 
     public void showUpgradePopup(Activity parentActivity, String updateMessage) {
