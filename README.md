@@ -24,6 +24,7 @@ To get started, clone the repo:
    | `appVersion`  | Your app version. Required. |
    | `platform`  | Your app platform, ex: android or iOS. Required. |
    | `environment`  | Your app environment, ex: dev, stating, production. Required. |
+   | `appLanguage`  | Your app language, ex: en, es. Nullable. |
 
 2. Save `MainActivity.java` file.
 

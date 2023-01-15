@@ -22,8 +22,9 @@ public class MainActivity extends AppCompatActivity {
         String appVersion = "1.0.0";
         String platform = "android";
         String environment = "production";
+        String appLanguage = "es"; //Your app language code. Nullable
 
-        AppInfo appInfo = new AppInfo(appId, appName, appVersion, platform, environment);
+        AppInfo appInfo = new AppInfo(appId, appName, appVersion, platform, environment, appLanguage);
 
         String title = "Update Required.";
         String updateButtonTitle = "UPDATE";
