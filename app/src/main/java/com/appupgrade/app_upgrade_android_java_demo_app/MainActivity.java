@@ -7,6 +7,7 @@ import android.os.Bundle;
 import com.appupgrade.app_upgrade_android_sdk.AppUpgrade;
 import com.appupgrade.app_upgrade_android_sdk.models.AlertDialogConfig;
 import com.appupgrade.app_upgrade_android_sdk.models.AppInfo;
+import com.appupgrade.app_upgrade_android_sdk.models.PreferredAndroidMarket;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,8 +24,11 @@ public class MainActivity extends AppCompatActivity {
         String platform = "android";
         String environment = "production";
         String appLanguage = "es"; //Your app language code. Nullable
+        // String preferredAndroidMarket = PreferredAndroidMarket.OTHER;
+        // String otherMarketPlaceUrl = "https://othermarketplaceurl.com";
 
         AppInfo appInfo = new AppInfo(appId, appName, appVersion, platform, environment, appLanguage);
+        // AppInfo appInfo = new AppInfo(appId, appName, appVersion, platform, environment, appLanguage, preferredAndroidMarket, otherMarketPlaceUrl);
 
         String title = "Update Required.";
         String updateButtonTitle = "UPDATE";
